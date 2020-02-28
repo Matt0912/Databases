@@ -1,0 +1,47 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Info message definition
+$msg = <<MSG
+==========================================
+DB VM Deployment Complete.
+
+To log in to MariaDB, type:
+mysql
+
+[then to quit mysql, type: exit]
+
+If mysql is not found on the PC, type:
+vagrant ssh
+mysql
+
+[then to quit, twice type: exit]
+
+To rebuild the database on failure, type:
+sh setup.sh
+[NOTE: all data will be lost!]
+
+See README.txt file for more info.
+==========================================
+MSG
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+  config.vm.box = "bento/centos-7"
+  config.vm.box_check_update = false
+  #if Vagrant.has_plugin?("vagrant-vbguest")
+  #  config.vbguest.auto_update = false
+  #end
+
+  config.vm.network :forwarded_port, guest: 3306, host: 3306
+  config.vm.provision :shell, :path => "vmconfig.sh"
+  config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777", "fmode=666"]
+  config.vm.post_up_message = $msg
+
+end
