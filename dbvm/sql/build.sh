@@ -35,4 +35,7 @@ USE uni;
 \. ${SOURCE}/uni/uni.sql
 \. ${SOURCE}/uni/unidata.sql
 
+USE hovsoc;
+\. ${SOURCE}/hovsoc/hovsoc.sql
+
 DATA

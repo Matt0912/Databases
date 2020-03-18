@@ -48,12 +48,11 @@ ORDER BY SUM(data) ASC
 LIMIT 1;
 
 -- !question5
-
 WITH OverThousand AS
   (SELECT SUM(data) AS 'working population', WardId AS ID,
   Ward.name AS Ward, County.name AS County FROM Statistic
   JOIN Ward ON Statistic.Wardid=Ward.Code
-  JOIN County ON County.Code=Ward.parent
+  LEFT OUTER JOIN County ON County.Code=Ward.parent
   GROUP BY WardId
   HAVING SUM(data) >= 1000)
   SELECT COUNT(*) AS 'Wards Over 1000' FROM OverThousand;
@@ -129,5 +128,5 @@ AllData AS
   SELECT 'England', AVG(RegionSizes.working_population) FROM RegionSizes
   UNION
   SELECT 'All', AVG(AllData.working_population) FROM AllData;
-  
+
 -- !end

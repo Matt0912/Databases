@@ -64,8 +64,6 @@ GROUP BY Ward.name)
   JOIN WardVotes ON WardVotes.WardID=Ward.id
   WHERE Party.name = 'Green';
 
-
-
 -- !question8
 
 WITH Green AS
