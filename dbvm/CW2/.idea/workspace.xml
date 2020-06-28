@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad347905-1516-45b4-b5dd-2acf48f98920" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CW1/ERModelling.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CW1/Modelling.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../CW1/Modelling.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CW1/Normalisation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../CW1/Normalisation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CW1/elections.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CW1/modelling.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../CW1/modelling.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1cU7nXhJ738sNTZxgk4BJPqOn5B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cw2-student/src/uk/ac/bris/cs/databases" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad347905-1516-45b4-b5dd-2acf48f98920" name="Default Changelist" comment="" />
+      <created>1590571485472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590571485472</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2240" y="-134" key="FileChooserDialogImpl" timestamp="1590571517928">
+      <screen x="1920" y="-835" width="1080" height="1890" />
+    </state>
+    <state x="2240" y="-134" key="FileChooserDialogImpl/0.0.1920.1050/1920.-835.1080.1890@1920.-835.1080.1890" timestamp="1590571517928" />
+  </component>
+</project>

@@ -58,7 +58,7 @@ WITH WardVotes AS
 JOIN Party ON Party.id=Candidate.party
 JOIN Ward ON Ward.id=Candidate.ward
 GROUP BY Ward.name)
-  SELECT Ward.name, CONCAT(Candidate.votes/WardVotes.TotalVotes*100, '%') AS GreenVotes FROM Candidate
+  SELECT Ward.name, CONCAT(Candidate.votes/WardVotes.TotalVotes*100) AS GreenVotes FROM Candidate
   JOIN Party ON Party.id=Candidate.party
   JOIN Ward ON Ward.id=Candidate.ward
   JOIN WardVotes ON WardVotes.WardID=Ward.id

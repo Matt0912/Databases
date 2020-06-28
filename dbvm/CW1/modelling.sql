@@ -14,25 +14,26 @@ CREATE TABLE Product (
   size        VARCHAR(100) NOT NULL,
   colour      VARCHAR(100) NULL,
   stock       INTEGER NOT NULL,
-  price       DECIMAL NOT NULL
+  price       DECIMAL(9,2) NOT NULL
 );
 
 CREATE TABLE Customer (
     email       VARCHAR(100) NOT NULL PRIMARY KEY,
     password    VARCHAR(100) NOT NULL,
     name        VARCHAR(100) NOT NULL,
-    phone       VARCHAR(12) NOT NULL,
+    phone       VARCHAR(12) NOT NULL UNIQUE,
     address     VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Purchase (
     id          INTEGER NOT NULL PRIMARY KEY,
     email       VARCHAR(100) NOT NULL,
-    discount    DECIMAL NULL,
-    total_price DECIMAL NOT NULL,
+    discount    DECIMAL(5,2) NOT NULL,
+    total_price DECIMAL(9,2) NOT NULL,
     time_placed DATETIME NOT NULL,
     CONSTRAINT Purchase_Customer_FK FOREIGN KEY (email) REFERENCES
-    Customer(email)
+    Customer(email),
+    CONSTRAINT Check_Discount CHECK (discount>=0 AND discount<=100)
 );
 
 CREATE TABLE ItemsBought (
@@ -40,7 +41,7 @@ CREATE TABLE ItemsBought (
     product_id  INTEGER NOT NULL,
     quantity    INTEGER NOT NULL,
     CONSTRAINT ItemsBought_Purchase_FK FOREIGN KEY (purchase_id) REFERENCES
-    Purchase(id)
+    Purchase(id),
     CONSTRAINT ItemsBought_Product_FK FOREIGN KEY (product_id) REFERENCES
     Product(id)
 );
@@ -48,7 +49,7 @@ CREATE TABLE ItemsBought (
 CREATE TABLE Images (
     id          INTEGER NOT NULL PRIMARY KEY,
     product_id  INTEGER NULL,
-    url         VARCHAR(100),
+    url         VARCHAR(100) NOT NULL,
     CONSTRAINT Images_Product_FK FOREIGN KEY (product_id) REFERENCES
     Product(id)
 );
